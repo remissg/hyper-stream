@@ -25,19 +25,19 @@ export const CalendarGrid = ({
   onEventClick,
 }: CalendarGridProps) => {
   return (
-    <div className="border rounded-lg overflow-hidden bg-card">
-      <div className="grid grid-cols-7 bg-muted">
+    <div className="rounded-xl overflow-hidden bg-card shadow-card border">
+      <div className="grid grid-cols-7 bg-muted/50 border-b">
         {WEEKDAYS.map((day) => (
           <div
             key={day}
-            className="p-2 text-center text-sm font-semibold border-r last:border-r-0 border-border"
+            className="py-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground border-r last:border-r-0 border-border/50"
           >
             {day}
           </div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7">
+      <div className="grid grid-cols-7 divide-x divide-y divide-border/50">
         {days.map((day, index) => {
           const dayEvents = sortEventsByTime(getEventsForDay(events, day));
           

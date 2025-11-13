@@ -62,7 +62,7 @@ export const CalendarView = ({ initialEvents = [] }: CalendarViewProps) => {
   };
 
   return (
-    <div className="w-full max-w-7xl mx-auto p-4">
+    <div className="w-full max-w-7xl mx-auto">
       <CalendarHeader
         currentDate={currentDate}
         viewMode={viewMode}
