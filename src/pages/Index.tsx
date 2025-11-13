@@ -35,14 +35,23 @@ const sampleEvents: CalendarEvent[] = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b">
-        <div className="container mx-auto py-6 px-4">
-          <h1 className="text-3xl font-bold">Calendar Application</h1>
-          <p className="text-muted-foreground mt-1">Manage your events efficiently</p>
+      <header className="border-b bg-card shadow-elegant">
+        <div className="container mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3">
+            <div className="h-10 w-10 rounded-xl bg-primary flex items-center justify-center shadow-sm">
+              <svg className="h-6 w-6 text-primary-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-3xl font-bold tracking-tight">Calendar</h1>
+              <p className="text-sm text-muted-foreground mt-0.5">Organize and manage your schedule</p>
+            </div>
+          </div>
         </div>
       </header>
       
-      <main className="container mx-auto py-8">
+      <main className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <CalendarView initialEvents={sampleEvents} />
       </main>
     </div>
